@@ -1,0 +1,51 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model WorkOrder
+<div class="text-center">
+    <h1>Work order</h1>
+    <h3>Create/Edit</h3>
+</div>
+
+<form class="form-group" asp-action="Create" method="post">
+    <label class="col-form-label" for="InventoryItemNumber">Item Number</label>
+    <input name="InventoryItemNumber" asp-for="@Model.InventoryItemNumber" type="text" class="form-control" />
+    <label class="col-form-label" for="Description">Item Description</label>
+    <input name="Description" asp-for="@Model.Description" type="text" class="form-control" />
+    <label class="col-form-label" for="CustomerName">Customer Name</label>
+    <input name="CustomerName" asp-for="@Model.CustomerName" type="text" class="form-control" />
+    <label class="col-form-label" for="SalesOrderNumber">Sales Order Number</label>
+    <input name="SalesOrderNumber" asp-for="@Model.SalesOrderNumber" type="number" class="form-control" />
+    <label class="col-form-label" for="Quantity">Quantity</label>
+    <input name="Quantity" asp-for="@Model.Quantity" type="number" class="form-control" />
+    <label class="col-form-label" for="ExtrusionInstruction">Extrusion Instructions</label>
+    <input name="ExtrusionInstruction" asp-for="@Model.ExtrusionInstruction" type="text" class="form-control" />
+    <label class="col-form-label" for="PrintingInstruction">Printing Instructions</label>
+    <input name="PrintingInstruction" asp-for="@Model.PrintingInstruction" type="text" class="form-control" />
+    <label class="col-form-label" for="PrintingUri">Printing Link</label>
+    <input name="PrintingUri" asp-for="@Model.PrintingUri" type="url" class="form-control" />
+    <label class="col-form-label" for="VentingUri">Venting Link</label>
+    <input name="VentingUri" asp-for="@Model.VentingUri" type="url" class="form-control" />
+    <label class="col-form-label" for="LabelingInstruction">Labeling Instructions</label>
+    <input name="LabelingInstruction" asp-for="@Model.LabelingInstruction" type="text" class="form-control" />
+    <label class="col-form-label" for="WorkCenter">Work Center</label>
+    <input name="WorkCenter" asp-for="@Model.WorkCenter" type="number" class="form-control" />
+    <label class="col-form-label" for="Notes">Notes</label>
+    <input name="Notes" asp-for="@Model.Notes" type="text" class="form-control" />
+    <label class="col-form-label" for="DateNeeded">Date Needed</label>
+    <input name="DateNeeded" asp-for="@Model.DateNeeded" type="date" class="form-control" />
+    <label class="col-form-label" for="DateCreated">Created Date</label>
+    <input name="DateCreated" asp-for="@Model.DateCreated" type="date" class="form-control" />
+    <label class="col-form-label" for="RunSpeed">Run Speed</label>
+    <input name="RunSpeed" asp-for="@Model.RunSpeed" type="number" class="form-control" />
+    <label class="col-form-label" for="Construction">Construction (tubing/cf/js/sws/dws/gt/mfold)</label>
+    <input name="Construction" asp-for="@Model.Construction" type="text" class="form-control" />
+    <label class="form-check-label" for="IsFda">FDA?</label>
+    <input name="IsFda" asp-for="@Model.IsFda" type="checkbox" class="form-check" />
+    <button type="reset" class="btn btn-info">Reset</button>
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>
+

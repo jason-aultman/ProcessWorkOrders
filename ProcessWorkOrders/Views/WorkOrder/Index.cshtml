@@ -1,0 +1,16 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@Html.ActionLink("Create", "Create", "WorkOrder")
+
+<div class="text-center">
+    <h1>Search</h1>
+    <form asp-action="Details">
+        <label for="id">Work Order Number</label>
+        <input name="id" id="id" for="id" type="number" />
+        <button type="submit">Get Work Order</button>
+    </form>
+
+</div>
