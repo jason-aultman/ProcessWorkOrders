@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProcessWorkOrders.Context;
 
 namespace ProcessWorkOrders.Migrations
 {
     [DbContext(typeof(WorkOrderDbContext))]
-    partial class WorkOrderDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220509030334_NewDB")]
+    partial class NewDB
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -67,9 +69,6 @@ namespace ProcessWorkOrders.Migrations
 
                     b.Property<int?>("QuantityPer")
                         .HasColumnType("int");
-
-                    b.Property<double>("Weight")
-                        .HasColumnType("float");
 
                     b.Property<double?>("Width")
                         .HasColumnType("float");

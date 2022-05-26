@@ -6,7 +6,7 @@
 @functions{
     public string background(string construction)
     {
-        if (construction == "Tubing")
+        if (construction == "Tubing" || construction.ToUpper() == "JS")
         {
             return "DodgerBlue";
         }
@@ -106,7 +106,7 @@
 
         <tr>
             <td>@r.Id</td>
-            <td>##</td>
+            <td>@r.Weight</td>
             <td>@r.Width</td>
             <td>@r.Length</td>
             <td>@r.QuantityPer</td>
@@ -116,6 +116,9 @@
 
         </tr>
         }
+        <tr>
+            @Html.ActionLink("New", "Create", "Rolls")
+        </tr>
     </tbody>
 </table>
 </body>

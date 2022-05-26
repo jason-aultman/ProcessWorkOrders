@@ -29,7 +29,7 @@ namespace ProcessWorkOrders.Controllers
             }
             else
             {
-                return View();
+                return View(new List<Roll>());
             }
         }
 
@@ -63,7 +63,7 @@ namespace ProcessWorkOrders.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Number,Width,Length,QuantityPer,Gauge,Operator,WorkOrderWorkOrderNumber")] Roll roll)
+        public async Task<IActionResult> Create([Bind("Weight,Number,Width,Length,QuantityPer,Gauge,Operator,WorkOrderWorkOrderNumber")] Roll roll)
         {
             if (ModelState.IsValid)
             {

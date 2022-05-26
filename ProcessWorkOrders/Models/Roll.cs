@@ -6,6 +6,7 @@ namespace ProcessWorkOrders.Models
     {
         [Key]
         public int Id { get; set; }
+        public double Weight { get; set; }
         public int Number { get; set; }
         public double? Width { get; set; }
         public double? Length { get; set; }
